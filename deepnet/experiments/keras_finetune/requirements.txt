@@ -1,2 +1,2 @@
-torch==1.12.1+cu116
 tensorflow_gpu==2.10.0
+keras==2.10.0

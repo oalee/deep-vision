@@ -1,4 +1,4 @@
-ipdb==0.13.9
-pytorch_lightning==1.7.5
-torchvision==0.13.1+cu116
 torch==1.12.1+cu116
+torchvision==0.13.1+cu116
+pytorch_lightning==1.7.5
+ipdb==0.13.9

@@ -1,0 +1,5 @@
+{
+    "dependencies": [
+        "https//github.com/oalee/deep-vision/tree/main/deepnet/models/keras/resnet"
+    ]
+}
