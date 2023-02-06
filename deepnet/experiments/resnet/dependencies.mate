@@ -1,7 +1,0 @@
-{
-    "dependencies": [
-        "https//github.com/oalee/deep-vision/tree/main/deepnet/data/cifar10",
-        "https//github.com/oalee/deep-vision/tree/main/deepnet/models/resnet",
-        "https//github.com/oalee/deep-vision/tree/main/deepnet/trainers/classification/pl_classification"
-    ]
-}
