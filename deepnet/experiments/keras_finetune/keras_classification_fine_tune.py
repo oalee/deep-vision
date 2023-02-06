@@ -1,9 +1,7 @@
-# from ..models.keras.resnet import get_model, ResNetTuneModel
-
 from tensorflow import keras
-from keras.applications import EfficientNetB0
+from keras.applications import ResNet50
 
-resnet: keras.Model = keras.applications.ResNet50(
+resnet: keras.Model = ResNet50(
     weights="imagenet",
     include_top=False,
     input_tensor=keras.Input(shape=(32, 32, 3)),

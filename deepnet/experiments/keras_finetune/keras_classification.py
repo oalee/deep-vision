@@ -1,4 +1,4 @@
-from ..models.keras.resnet import get_model
+from ...models.keras.resnet import get_model
 import keras, sys, os
 
 
