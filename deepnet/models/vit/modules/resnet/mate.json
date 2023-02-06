@@ -1,0 +1,32 @@
+{
+    "export": "resnet",
+    "name": "resnet18",
+    "version": "1.0",
+    "description": "ResNet-18 model from the paper: \"Deep Residual Learning for Image Recognition\"",
+    "models": [
+        {
+            "file": "resnet",
+            "class_name": "ResNet",
+            "params": {
+                "block": "BasicBlock",
+                "layers": [
+                    3,
+                    4,
+                    6,
+                    3
+                ],
+                "num_classes": 1000,
+                "in_channels": 3,
+                "zero_init_residual": false,
+                "groups": 1,
+                "width_per_group": 64,
+                "replace_stride_with_dilation": [
+                    false,
+                    false,
+                    false
+                ],
+                "norm_layer": "BatchNorm2d"
+            }
+        }
+    ]
+}
