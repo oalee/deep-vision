@@ -1,5 +1,5 @@
 from ...data.cifar10 import CifarLightningDataModule
-from ...trainers.classification.pl_classification import LightningClassificationModule
+from ...trainers.classification import LightningClassificationModule
 from ...models.resnet import ResNetTuneModel
 from torchvision.models import resnet18, resnet34, ResNet34_Weights
 import sys
