@@ -13,7 +13,7 @@ class LightningClassificationModule(LightningModule):
         self.classifier = classifier
         self.optimizer = optimizer
 
-        self.train_accuracy = torchmetrics.Accuracy(task="multiclass"̧, num_classes=num_classes)
+        self.train_accuracy = torchmetrics.Accuracy(task="multiclass", num_classes=num_classes)
         self.val_accuracy = torchmetrics.Accuracy(task="multiclass", num_classes=num_classes)
 
         self.loss = lambda y_hat, y: self.criterion(y_hat, y)
