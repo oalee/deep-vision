@@ -6,9 +6,9 @@ import sys, os, torch, pytorch_lightning as pl, yerbamate, tensorboard
 
 env = yerbamate.Environment()
 network = ResNetTuneModel(
-    resnet34(pretrained=True), num_classes=10
+    resnet34(pretrained=True), num_classes=10, update_all_params=True
 )
-optimizer = torch.optim.Adam(network.parameters(), lr=0.004, betas=[0.9, 0.999])
+optimizer = torch.optim.Adam(network.parameters(), lr=0.0004, betas=[0.9, 0.999])
 lr_scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
     optimizer,
     mode="min",
