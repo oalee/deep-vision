@@ -6,15 +6,15 @@ import ipdb
 
 
 class LightningClassificationModule(LightningModule):
-    def __init__(self, classifier: t.nn.Module, optimizer: t.optim.Optimizer, *args):
+    def __init__(self, classifier: t.nn.Module, optimizer: t.optim.Optimizer, num_classes=10, *args):
         super().__init__(*args)
 
         self.criterion = t.nn.CrossEntropyLoss()
         self.classifier = classifier
         self.optimizer = optimizer
 
-        self.train_accuracy = torchmetrics.Accuracy(task="multiclass")
-        self.val_accuracy = torchmetrics.Accuracy(task="multiclass")
+        self.train_accuracy = torchmetrics.Accuracy(task="multiclass"̧, num_classes=num_classes)
+        self.val_accuracy = torchmetrics.Accuracy(task="multiclass", num_classes=num_classes)
 
         self.loss = lambda y_hat, y: self.criterion(y_hat, y)
 
