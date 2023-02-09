@@ -2,9 +2,9 @@ from ...data.cifar10 import CifarLightningDataModule
 from ...trainers.classification import LightningClassificationModule
 from ...models.resnet import ResNetTuneModel
 from torchvision.models import resnet18, resnet34
-import sys, os, torch, pytorch_lightning as pl, mate 
+import sys, os, torch, pytorch_lightning as pl, yerbamate 
 
-env = mate.Environment()
+env = yerbamate.Environment()
 network = ResNetTuneModel(
     resnet34(pretrained=True), num_classes=10
 )

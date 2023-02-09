@@ -1,3 +1,4 @@
-pytorch_lightning==1.7.5
-torch==1.12.1+cu116
-torchvision==0.13.1+cu116
+--index-url https://download.pytorch.org/whl/torch_stable.html
+pytorch_lightning>=1.7.5
+torchvision>=0.13.1+cu116
+torch>=1.12.1+cu116
