@@ -6,9 +6,9 @@ import sys, os, torch, pytorch_lightning as pl, mate
 
 env = mate.Environment()
 network = ResNetTuneModel(
-    resnet34(pretrained=True), num_classes=10
+    resnet34(pretrained=True), num_classes=10, update_all_params=True
 )
-optimizer = torch.optim.Adam(network.parameters(), lr=0.004, betas=[0.9, 0.999])
+optimizer = torch.optim.Adam(network.parameters(), lr=0.0004, betas=[0.9, 0.999])
 lr_scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
     optimizer,
     mode="min",
@@ -24,16 +24,14 @@ optimizer = {
 }
 
 pl_module = LightningClassificationModule(network, optimizer)
-data_module = CifarLightningDataModule(env["data"], batch_size=128, image_size=[32, 32])
-save_path = env["results"]
+data_module = CifarLightningDataModule(env["DATA_PATH"], batch_size=128, image_size=[32, 32])
 logger = pl.loggers.TensorBoardLogger(env["logs"], env.name) 
-
 callbacks = [
     pl.callbacks.ModelCheckpoint(
         monitor="val_accuracy",
         save_top_k=1,
         mode="max",
-        dirpath=save_path,
+        dirpath= env["results"],
         save_last=True,
     ),
     pl.callbacks.EarlyStopping(monitor="val_loss", patience=10, mode="min"),
@@ -50,7 +48,7 @@ if env.train:
     pl_trainer.fit(pl_module, data_module)
 if env.restart:
     pl_trainer.fit(
-        pl_module, data_module, ckpt_path=os.path.join(save_path, "last.ckpt")
+        pl_module, data_module, ckpt_path=os.path.join( env["results"], "last.ckpt")
     )
 elif env.test: 
-    pl_trainer.test(pl_module, data_module, ckpt_path=save_path)
+    pl_trainer.test(pl_module, data_module, ckpt_path=os.path.join( env["results"], "last.ckpt"))

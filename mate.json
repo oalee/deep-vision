@@ -1,3 +1,8 @@
 {
-    "project": "deepnet"
+    "project": "deepnet",
+    "env": {
+        "results": "Required. Path to the results directory.",
+        "data": "Required. Path to the data directory.",
+        "logs": "Required. Path to the logs directory."
+    }
 }

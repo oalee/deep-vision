@@ -1,22 +1,20 @@
 from tensorflow import keras
-from keras.applications import ResNet50
+from keras.applications.resnet import ResNet50
+import ipdb 
 
 resnet: keras.Model = ResNet50(
-    weights="imagenet",
     include_top=False,
     input_tensor=keras.Input(shape=(32, 32, 3)),
     classes=10,
     classifier_activation="softmax",
 )
 
-lr_schedule = keras.optimizers.schedules.ExponentialDecay(
-    initial_learning_rate=1e-6, decay_steps=10000, decay_rate=0.9
-)
+
 
 resnet.compile(
-    optimizer=keras.optimizers.Adam(learning_rate=lr_schedule),
+    optimizer=keras.optimizers.Adam(learning_rate=0.0004, beta_1=0.9, beta_2=0.999),
     loss="binary_crossentropy",
-    metrics=["accuracy"],
+    metrics=["accuracy", "loss"],
 )
 
 

@@ -1,9 +1,9 @@
-pytorch_lightning==1.7.5
-ipdb==0.13.9
-yerbamate.egg==info
-einops==0.4.1
-torchmetrics==0.9.3
-tensorflow_gpu==2.10.0
-torchvision==0.13.1+cu116
 transformers==4.22.0
 torch==1.12.1+cu116
+torchvision==0.13.1+cu116
+ipdb==0.13.9
+torchmetrics==0.9.3
+yerbamate.egg==info
+tensorflow_gpu==2.10.0
+einops==0.4.1
+pytorch_lightning==1.7.5
