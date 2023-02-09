@@ -1,8 +1,8 @@
-torchvision==0.13.1+cu116
 torchmetrics==0.9.3
-transformers==4.22.0
-yerbamate.egg==info
-torch==1.12.1+cu116
 pytorch_lightning==1.7.5
 ipdb==0.13.9
 einops==0.4.1
+yerbamate.egg==info
+torch==1.12.1+cu116
+transformers==4.22.0
+torchvision==0.13.1+cu116
