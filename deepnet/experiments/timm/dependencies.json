@@ -1,0 +1,13 @@
+{
+    "dependencies": [
+        "https://github.com/oalee/deep-vision/tree/main/timm/",
+        "https://github.com/oalee/deep-vision/tree/main/deepnet/trainers/classification",
+        "https://github.com/oalee/deep-vision/tree/main/deepnet/models/resnet",
+        "https://github.com/oalee/deep-vision/tree/main/deepnet/data/cifar10"
+    ],
+    "env": {
+        "results": "Required. The path to the results directory.",
+        "data": "Required. The path to the CIFAR-10 dataset.",
+        "logs": "Required. The path to the logs directory."
+    }
+}
