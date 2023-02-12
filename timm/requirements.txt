@@ -1,10 +1,10 @@
 --extra-index-url https://download.pytorch.org/whl/torch_stable.html
-torch~=1.12.1
-PyYAML~=6.0
-tensorflow_datasets~=4.6.0
+webdataset~=0.1.103
 tensorflow_gpu~=2.10.0
-wandb~=0.12.21
+huggingface_hub~=0.10.1
+PyYAML~=6.0
 torchvision~=0.13.1
 numpy~=1.24.1
-webdataset~=0.1.103
-huggingface_hub~=0.10.1
+tensorflow_datasets~=4.6.0
+wandb~=0.12.21
+torch~=1.12.1
