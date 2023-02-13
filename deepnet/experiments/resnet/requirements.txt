@@ -1,6 +1,6 @@
 --extra-index-url https://download.pytorch.org/whl/torch_stable.html
-pytorch_lightning~=1.7.5
-tensorboard~=2.10.0
 timm~=0.6.12
-torchvision~=0.13.1
+tensorboard~=2.10.0
 torch~=1.12.1
+pytorch_lightning~=1.7.5
+torchvision~=0.13.1
