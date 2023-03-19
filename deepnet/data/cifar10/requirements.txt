@@ -1,5 +1,5 @@
 --extra-index-url https://download.pytorch.org/whl/torch_stable.html
-ipdb~=0.13.9
-torchvision~=0.13.1
 torch~=1.12.1
 pytorch_lightning~=1.7.5
+torchvision~=0.13.1
+ipdb~=0.13.9

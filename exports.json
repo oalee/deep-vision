@@ -1,0 +1,156 @@
+[
+    {
+        "type": "data",
+        "name": "cifar10",
+        "url": "https://github.com/oalee/deep-vision/tree/main/deepnet/data/cifar10",
+        "short_url": "oalee/deep-vision/deepnet/data/cifar10",
+        "dependencies": [
+            "--extra-index-url https://download.pytorch.org/whl/torch_stable.html",
+            "torch~=1.12.1",
+            "pytorch_lightning~=1.7.5",
+            "torchvision~=0.13.1",
+            "ipdb~=0.13.9"
+        ]
+    },
+    {
+        "type": "data",
+        "name": "cifar100",
+        "url": "https://github.com/oalee/deep-vision/tree/main/deepnet/data/cifar100",
+        "short_url": "oalee/deep-vision/deepnet/data/cifar100",
+        "dependencies": [
+            "--extra-index-url https://download.pytorch.org/whl/torch_stable.html",
+            "torch~=1.12.1",
+            "pytorch_lightning~=1.7.5",
+            "torchvision~=0.13.1",
+            "ipdb~=0.13.9"
+        ]
+    },
+    {
+        "type": "data",
+        "name": "keras",
+        "url": "https://github.com/oalee/deep-vision/tree/main/deepnet/data/keras",
+        "short_url": "oalee/deep-vision/deepnet/data/keras",
+        "dependencies": [
+            "tensorflow_gpu~=2.10.0"
+        ]
+    },
+    {
+        "type": "data",
+        "name": "timm_aug",
+        "url": "https://github.com/oalee/deep-vision/tree/main/deepnet/data/timm_aug",
+        "short_url": "oalee/deep-vision/deepnet/data/timm_aug",
+        "dependencies": [
+            "numpy~=1.24.2"
+        ]
+    },
+    {
+        "type": "experiments",
+        "name": "resnet",
+        "url": "https://github.com/oalee/deep-vision/tree/main/deepnet/experiments/resnet",
+        "short_url": "oalee/deep-vision/deepnet/experiments/resnet",
+        "dependencies": [
+            "--extra-index-url https://download.pytorch.org/whl/torch_stable.html",
+            "torchvision~=0.13.1",
+            "torch~=1.12.1",
+            "pytorch_lightning~=1.7.5",
+            "timm~=0.6.12",
+            "tensorboard~=2.10.0",
+            "https://github.com/oalee/deep-vision/tree/main/deepnet/data/cifar10",
+            "https://github.com/oalee/deep-vision/tree/main/deepnet/trainers/classification",
+            "https://github.com/oalee/deep-vision/tree/main/deepnet/models/resnet"
+        ]
+    },
+    {
+        "type": "experiments",
+        "name": "resnet_keras",
+        "url": "https://github.com/oalee/deep-vision/tree/main/deepnet/experiments/resnet_keras",
+        "short_url": "oalee/deep-vision/deepnet/experiments/resnet_keras",
+        "dependencies": [
+            "keras~=2.10.0",
+            "https://github.com/oalee/deep-vision/tree/main/deepnet/models/keras/resnet"
+        ]
+    },
+    {
+        "type": "experiments",
+        "name": "kerasnet",
+        "url": "https://github.com/oalee/deep-vision/tree/main/deepnet/experiments/kerasnet",
+        "short_url": "oalee/deep-vision/deepnet/experiments/kerasnet",
+        "dependencies": [
+            "tensorflow_gpu~=2.10.0",
+            "keras~=2.10.0"
+        ]
+    },
+    {
+        "type": "experiments",
+        "name": "timm",
+        "url": "https://github.com/oalee/deep-vision/tree/main/deepnet/experiments/timm",
+        "short_url": "oalee/deep-vision/deepnet/experiments/timm",
+        "dependencies": [
+            "--extra-index-url https://download.pytorch.org/whl/torch_stable.html",
+            "torch~=1.12.1",
+            "pytorch_lightning~=1.7.5",
+            "https://github.com/oalee/deep-vision/tree/main/deepnet/data/cifar10",
+            "https://github.com/oalee/deep-vision/tree/main/deepnet/trainers/classification",
+            "https://github.com/oalee/deep-vision/tree/main/timm/",
+            "https://github.com/oalee/deep-vision/tree/main/deepnet/models/resnet"
+        ]
+    },
+    {
+        "type": "models",
+        "name": "resnet",
+        "url": "https://github.com/oalee/deep-vision/tree/main/deepnet/models/resnet",
+        "short_url": "oalee/deep-vision/deepnet/models/resnet",
+        "dependencies": [
+            "--extra-index-url https://download.pytorch.org/whl/torch_stable.html",
+            "torch~=1.12.1"
+        ]
+    },
+    {
+        "type": "models",
+        "name": "keras",
+        "url": "https://github.com/oalee/deep-vision/tree/main/deepnet/models/keras",
+        "short_url": "oalee/deep-vision/deepnet/models/keras",
+        "dependencies": [
+            "--extra-index-url https://download.pytorch.org/whl/torch_stable.html",
+            "torch~=1.12.1",
+            "tensorflow_gpu~=2.10.0"
+        ]
+    },
+    {
+        "type": "models",
+        "name": "vit_pytorch",
+        "url": "https://github.com/oalee/deep-vision/tree/main/deepnet/models/vit_pytorch",
+        "short_url": "oalee/deep-vision/deepnet/models/vit_pytorch",
+        "dependencies": [
+            "--extra-index-url https://download.pytorch.org/whl/torch_stable.html",
+            "torch~=1.12.1",
+            "torchvision~=0.13.1",
+            "einops~=0.4.1"
+        ]
+    },
+    {
+        "type": "models",
+        "name": "torch_vit",
+        "url": "https://github.com/oalee/deep-vision/tree/main/deepnet/models/torch_vit",
+        "short_url": "oalee/deep-vision/deepnet/models/torch_vit",
+        "dependencies": [
+            "--extra-index-url https://download.pytorch.org/whl/torch_stable.html",
+            "torch~=1.12.1",
+            "torchvision~=0.13.1",
+            "einops~=0.4.1"
+        ]
+    },
+    {
+        "type": "trainers",
+        "name": "classification",
+        "url": "https://github.com/oalee/deep-vision/tree/main/deepnet/trainers/classification",
+        "short_url": "oalee/deep-vision/deepnet/trainers/classification",
+        "dependencies": [
+            "--extra-index-url https://download.pytorch.org/whl/torch_stable.html",
+            "torch~=1.12.1",
+            "pytorch_lightning~=1.7.5",
+            "ipdb~=0.13.9",
+            "torchmetrics~=0.9.3"
+        ]
+    }
+]
